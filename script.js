@@ -8,6 +8,15 @@ function getInputText() {
         textComparison(inputText);
     }
 }
+// Run if 'Enter' is hit
+const input = document.getElementById("text-input");
+input.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("check-btn").click();
+    }
+});
+
 // Compare inputText with reveresed text
 const textComparison = (input) => {
     let textToCheck = input
@@ -19,10 +28,10 @@ const textComparison = (input) => {
     if (textToCheck === input.toLowerCase().replace(/[^0-9a-z]/g, "")) {
         document.getElementById(
             "result"
-        ).innerText = `${input} is a palindrome!`;
+        ).innerHTML = `<span id="is-text">${input}</span> is a palindrome!`;
     } else {
         document.getElementById(
             "result"
-        ).innerText = `${input} is not a palindrome`;
+        ).innerHTML = `<span id="is-not-text">${input}</span> is not a palindrome`;
     }
 };

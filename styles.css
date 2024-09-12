@@ -1,0 +1,140 @@
+:root {
+    --white: #f3f4f6;
+    --black: #2d2a32;
+    --green: #00b972;
+    --light-grey: #d7d7d7;
+    --dark-grey: #181719;
+    --lime: #92eb79;
+    --trans-black: rgba(45, 42, 50, 0.6);
+}
+
+/* Base Styles */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 10px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+h1,
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* #center-content {
+} */
+
+#title-text {
+    margin: 4rem;
+}
+
+#input-group {
+    /* background-color: lightcoral; */
+    display: inline-block;
+    position: relative;
+    line-height: 2;
+    font-size: 18px;
+    padding: 0 0 0 0;
+    margin: 2rem;
+    border-radius: 5rem;
+    width: 100%;
+    /* right: -50px; */
+}
+
+#text-input {
+    display: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    position: relative;
+    width: 400px;
+    padding: 0 2rem 0 2rem;
+    border: 3px solid var(--black);
+    border-radius: 5rem;
+    z-index: 3;
+}
+
+/* Remove default focus outline and remove placeholder text */
+#text-input:focus {
+    outline: none;
+}
+#text-input:focus::placeholder {
+    color: transparent;
+}
+
+#check-btn {
+    display: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 0 2rem 0 5rem;
+    color: var(--white);
+    background-color: var(--black);
+    border: 3px solid var(--black);
+    border-radius: 5rem;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+    left: -50px;
+    cursor: pointer;
+}
+
+#check-btn:hover {
+    background-color: var(--green);
+    color: var(--white);
+    border: 3px solid var(--green);
+    transition: 0.3s;
+}
+
+#is-text {
+    color: var(--green);
+    font-weight: bold;
+}
+
+#is-not-text {
+    color: #f33131;
+    font-weight: bold;
+}
+/* Footer */
+footer {
+    margin-top: 4rem;
+    font-size: 1.4rem;
+    color: var(--white);
+}
+/* footer a {
+    color: var(--black);
+    text-decoration: underline;
+    transition: 0.3s;
+} */
+/* footer a:hover {
+    color: var(--green);
+    transition: 0.3s;
+} */
