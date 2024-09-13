@@ -35,3 +35,16 @@ const textComparison = (input) => {
         ).innerHTML = `<span id="is-not-text">${input}</span> is not a palindrome`;
     }
 };
+
+// Reset button
+const resetInput = () => {
+    document.getElementById("text-input").value = "";
+    document.getElementById("result").innerHTML = "";
+
+    // Trigger rotate animation class
+    let btn = document.getElementById("reset-btn");
+    btn.classList.add("spin-animation");
+    setTimeout(function () {
+        btn.classList.remove("spin-animation");
+    }, 500);
+};
